@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<project name="MyStruts" default="All" basedir="." >
+	<property name="java.src.dir" value = ".\src" />
+	<property name="web.pages.dir" value = ".\webpages" />
+	<property name="config.dir" value = ".\config" />
+	<property name="lib.dir"  value = ".\lib" />
+	<property name="classes.dir"  value = ".\classes" />
+	
+	<target name="All" depends="Reset,Compile,War">
+	</target>
+	
+	<target name="Reset" >
+		<delete dir="${classes.dir}"></delete>
+		<mkdir dir="${classes.dir}"/>
+	</target>
+		
+	<target name="Compile" >
+		<path id="my.class.path">
+			<fileset dir="${lib.dir}">
+				<include name="*.jar"/><!-- include all jars in this folder -->
+			</fileset>
+		</path>
+		<javac srcdir="${java.src.dir}" includeantruntime="false" classpathref="my.class.path" destdir="${classes.dir}" debug="true">
+			
+		</javac>
+	</target>
+	
+
+	<!-- create webservice war file -->
+	<target name="War">
+		<war destfile="./SpringProject.war" webxml="${config.dir}/web.xml">
+			<fileset dir="${web.pages.dir}"/>
+			<classes dir="${classes.dir}"/>
+		  	<lib dir="${lib.dir}"/>
+			<classes dir="${config.dir}" includes="struts.xml"/>
+			<classes dir="." includes="log4j.properties"/>
+			<webinf file="${config.dir}/applicationContext.xml"/> 
+		</war>	
+		<copy todir="C:\Program Files\Apache Software Foundation\Tomcat 8.0\webapps"
+					file="./SpringProject.war"/>
+	</target>
+	
+</project>
