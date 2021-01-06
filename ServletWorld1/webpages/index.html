@@ -1,0 +1,107 @@
+<html>
+     <head>
+			<title>Yet to decide</title>
+	        <link rel="stylesheet" type="text/css" href="index.css">	
+			<script type= "text/javascript" src="myscripts.js"></script>
+	 </head> 
+	  <body>
+	    <div style="height:100%;width:100%">
+		 
+			<div id="div1" class="left" >
+								<div id="divLogo" class="left"><img id="imgLogo" src="mahabarata.png" alt=""></img></div>
+								<div id="divLogin" class="left">
+								<form method="post" action="FirstLoginServlet">
+									<table id="loginTable" align="center">									
+										<tr>
+										<td><font color="white">EmailId</font></td>  <td><input id="uName" type="text" name="uname1" required/></td>
+									    <td><font color="white">Password</font></td>  <td><input id="password" type="password" name="password1" required/></td>
+										<td><input onclick="return unamepasswordValidate();" id="login" type="submit" value="login" name="login"/></td>
+										</tr>
+										<tr>
+										<td onclick="signUP();"><font color="white"><a href="#">Sign Up!</a></font></td>
+										 <td onclick="recovery();"><font color="#4dffa6"><a href="#">Account Recovery?</a></font></td>
+										</tr>								 	
+									</table>
+								  </form>
+								  </div>
+			</div>
+					<div id="div2">
+						<div id="div2_1"class="left" onmouseover="colorChange();" onmouseout="revertColor();">
+								 <a href=""><img id="img" src="mahasketch1.jpg"  alt=""></a>			 
+						</div>
+							<div id="div2_2"class="left" >
+								<div id="kiranVid" style="display:block"><video width="100%" height="100%" autoplay muted loop>
+								  <source src="kiran.mp4" type="video/mp4">
+								  
+								  Your browser does not support the video tag.
+								</video></div>
+							
+							
+								 		<div id="div2_21" style="display:none">
+											<form method="post" action="FirstServletSignup">
+											<table align="center">
+											   <tr> <td><h2>Create Free Account!</h2></td></tr>
+											   </tr><td><h4>Please Do Enter All Fields</h4></td></tr>
+												<tr><td>Name:</td><td><input id="signupName" name="signupName"type="text" placeholder="Full Name" required/></td>
+												</tr>
+												<tr><td>EmailId:</td><td><input onblur="return ajaxCheck1();" id="signupEmail" name="signupEmail"type="email" placeholder="example@gmail.com"required/>
+												<lable id="mailerror"></lable></td>
+												</tr>
+												<tr><td>NewPassword:</td><td><input onblur="passValidate();" id="signupNewPassword" name="signupNewPassword"type="password"required/>
+												<span id="passwordSide"></span></td>
+												</tr>
+												<tr><td>Retype Password:</td><td><input onblur="repassValidate();" id="signupNewPassword1" name="signupNewPassword1"type="password"required/>
+												<span id="passwordSide1"></span></td>
+												</tr>
+												<tr><td>Sex:</td><td><input id="gender" name="gender" type="radio" value="m"/>Male
+												<input id="gender" name="gender" type="radio" value="f"/>Female</td>
+												</tr>
+												<tr><td>Date Of Birth:</td><td><input    onblur="return date1();" id="date" name="date"type="date"  max="2009-01-02" min="1930-01-02" required/></td>
+												</tr>
+											    <tr><td>SecurityQuestion:</td>
+												  <td>
+												  <select id="security" name="security">
+												  <option>What's your mother's maiden name</option>
+											      <option>What's your first girl/boy friend name</option>
+											      <option>What's your place of birth</option>
+											      </select>									 											   
+												  </td>
+												 </tr>
+												<tr><td>Your Answer:</td><td><input id="signupsecurityanswer" name="signupsecurityanswer"type="text" placeholder="Enter Your Answer"required/></td>
+												</tr>
+												<tr><td><input  id="signupSubmit" name="signupSubmit"type="submit" value="click"/></td>
+												</tr>
+											</table>
+											</form>
+										</div>
+										<div id="div2_22" style="display:none">
+											<form>
+											  <table align="center">
+											      <tr> <td><h4>Find Your Account!</h4></td></tr>
+												  <tr><td>User EmailId:</td><td><input onblur="emailSecurity();" id="recoveryName" name="recoveryName" type="email" placeholder="example@gmail.com"required/></td>
+												  </tr>
+												   <tr><td>SecurityQuestion:</td>
+												   <td>
+												  <input type="text" id="recoveryQuestion" name="recoveryQuestion" placeholder="your question" required/>									 											   
+												   </td>
+												  </tr>
+												  <tr><td>Your Answer:</td><td><input id="recoverysecurityanswer" name="recoverysecurityanswer"type="text" placeholder="Enter Your Answer"required/></td>
+												</tr>
+												  <tr><td><input name="recoverySubmit"type="submit" value="click"/></td>
+												  </tr>
+											  </table>
+											</form>
+			
+										</div>
+							</div>
+							
+					 </div>
+				<div id="div3" class="left">
+				<p align="center">&copy
+				All Rights Reserved by KIRAN KUMAR BOJJA</p>
+				<p align="center">Contact at<a href="https://www.facebook.com/people/Kiran-Kumar/100002347184524"> @F</a>
+				<a href="https://accounts.google.com/AccountChooser"> @G</a></p></div>			
+		</div>
+	  </body>
+	  	
+</html>

@@ -1,0 +1,81 @@
+				#divLogo{
+					height:100%;
+					width:20%;     
+					background-color: #4d4dff;	
+				}
+				#imgLogo{
+					height:115%;
+					width:115%; 
+				}
+				#divLogin{
+					height:100%;
+					width:80%;
+					background-color: #4d4dff;
+				}
+				
+				
+				
+				
+				#div1{
+					height:15%;
+					width:100%;
+					background-color: #4d4dff;
+				    
+					}
+					#div2{
+					height:75%;
+					width:100%; 
+					background:yellow;
+					}
+					#div2_1{
+					height:100%;
+					width:20%;
+					background:blue;
+					}
+					#img{
+						height:100%;
+						width:100%; 
+					}
+					
+					#div2_2{
+					height:100%;
+					width:80%;
+					background:white;
+					//background:#D7EAFA;
+					}
+				    #div2_21{
+						height: 406px;
+						//background:#D7EAFA;					
+						background:white;
+
+					}
+					#div2_22{
+						height: 406px;
+						//background:#D7EAFA;					
+						background:white;
+					}
+					#div3{
+					height:10%;
+					width:100%;
+					background:white;
+					}
+					
+					.left{
+					float:left;
+					}
+					#div3{
+					footer{
+					var d = new Date()
+                    document.write(d.getFullYear())
+                    }
+					#myimg
+					{
+					  max-width:20%; 
+					  max-height:60%;
+					  margin:auto;
+					  display:block;
+					}
+					#kiranVid{
+						
+					}
+					

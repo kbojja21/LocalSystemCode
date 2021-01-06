@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="ServletWorld1" default="createFirstWebsitePackage" basedir="." > 
+	<property name="app.classes.dir" value = "bin" />
+	<property name="app.jar.dir" value = "lib" /> <!--  create directory called lib and store jar files -->
+	<property name="app.web.xml" value = "web.xml" />
+	<property name="app.html.dir" value = "webpages" /> <!--  create directory called webpages and store html/js/css/images files -->
+	<property name="app.folder.name" value = "ServletWorld1.war" />
+	<property name="tomcat.webapps.dir" value = "C:\Program Files\Apache Software Foundation\Tomcat 8.0\webapps" />
+	
+	<target name="createFirstWebsitePackage">
+		<war destfile="${app.folder.name}" webxml="${app.web.xml}"> 
+			<fileset dir="${app.html.dir}"/>
+			<lib dir="${app.jar.dir}"> 
+			</lib>
+			<classes dir="${app.classes.dir}"/>
+		</war>	
+		
+			<copy todir="${tomcat.webapps.dir}"
+			file="./ServletWorld1.war"/>
+	</target>
+</project>
